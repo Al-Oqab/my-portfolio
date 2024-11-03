@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>Baker Al Daood</title>
+     <!-- eine überschrift labe erstellen bei header -->
+     <!--Bei nav geht es um den Abstand zwischen überschrift und die Link wörten-->
+     <!--(nav a) ändert die Farbe von link wörten-->
+     <!-- article lässt Abstand von linker Seite -->
+     <!--footer funktionert genau wie header -->
+     <!--padding macht abstand von Rahmen für den text -->
+     
+    <style>
+        
+        header {
+            background-color: #b12121; 
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none; 
+            color: #b12121;
+        }
+        article {
+            margin: 20px;
+        }
+        footer {
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 10px 0;
+            color: rgb(0, 0, 0);
+            
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #b12121;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Baker Al Daood</h1>
+    <p>
+        Informatik student
+    </p>
+    <img src="pics/me.jpg" alt="Mein Foto" width="300">
+    
+</header>
+<!--<li> <\li> macht die link wörte in zeilenform-->
+<nav>
+    <a href="#ueber-mich">Über mich</a>
+    <a href="#kenntnisse">Kenntnisse</a>
+    <a href="#projekte">Projekte</a>
+    <a href="#kontakt">Kontakt</a>
+</nav>
+<main>
+<article id="ueber-mich">
+    <h2>Über mich</h2>
+    <p>Mein Name ist Baker Al Daood, ich wurde am 20.01.1999 in Al-Qaim geboren. Derzeit studiere ich Internationale Medieninformatik an der HTW Berlin. Vor diesem Studium habe ich bereits ein Studium im Bauingenieurwesen an der Freien Universität Berlin abgeschlossen. Mit meinem Hintergrund im Ingenieurwesen und meinem aktuellen Fokus auf Medien und Informatik strebe ich danach, interdisziplinäre und innovative Lösungen zu entwickeln.</p>
+    <img src="pics/mypic.png" alt="Über mich" width="250">
+    <figcaption>Ein Bild von mir.</figcaption>
+</article>
+
+<article id="kenntnisse">
+    <h2>Kenntnisse</h2>
+    <p>Ich habe umfangreiche Kenntnisse in verschiedenen Programmiersprachen und Technologien, darunter:</p>
+    <ul>
+        <li>HTML5, CSS, JavaScript</li>
+        <li>PHP, Python, C++</li>
+        <li>Adobe photoshop</li>
+        <li>Adobe illustrator</li>
+        <li>Haskell, Assmbly</li>
+
+    </ul>
+    <img src="pics/kenntnisse.jpg" alt="Kenntnisse" width="300">
+    <figcaption>Ein Überblick über meine Kenntnisse.</figcaption>
+</article>
+
+<article id="projekte">
+    <h2>Projekte</h2>
+    <table>
+        <tr>
+            <th>Projektname</th>
+            <th>Technologien</th>
+            <th>Beschreibung</th>
+        </tr>
+        <tr>
+            <td>Website für ein Café</td>
+            <td>HTML, CSS, JavaScript</td>
+            <td>Eine responsive Website für ein lokales Café mit Online-Bestellung.</td>
+        </tr>
+        <tr>
+            <td>E-Commerce Plattform</td>
+            <td>PHP, MySQL</td>
+            <td>Eine vollständige E-Commerce-Lösung mit Warenkorb und Zahlungsintegration.</td>
+        </tr>
+        <tr>
+            <td>Portfolio Webseite</td>
+            <td>React, Node.js</td>
+            <td>Eine persönliche Portfolio-Webseite zur Präsentation meiner Arbeiten.</td>
+        </tr>
+    </table>
+    <img src="pics/projekt.png" alt="Projekte" width="500">
+    <figcaption>Ein Screenshot eines meiner Projekte.</figcaption>
+</article>
+
+<article id="kontakt">
+    <h2>Kontakt</h2>
+    <p>Sie können mich jederzeit über meine E-Mail-Adresse kontaktieren: baker.aldaood.g@gmail.com. Ich freue mich auf Ihre Nachricht!</p>
+</article>
+
+<footer>
+    <p>&copy; 2024 Aloqab. Alle Rechte vorbehalten.</p>
+    
+            </footer>
+        </main>
+    </body>
+</html>
