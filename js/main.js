@@ -76,3 +76,9 @@
     }, { rootMargin: "-45% 0px -50% 0px" });
     map.forEach((_, sec) => io.observe(sec));
 })();
+
+/* Current year in footer */
+(() => {
+    const year = document.getElementById("year");
+    if (year) year.textContent = new Date().getFullYear();
+})();
