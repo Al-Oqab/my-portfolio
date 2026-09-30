@@ -48,3 +48,40 @@ h1, h2, h3 { line-height: 1.15; letter-spacing: -0.02em; margin: 0 0 .5em; }
 ::selection { background: var(--accent); color: var(--accent-ink); }
 
 .container { width: min(100% - 2.5rem, var(--container)); margin-inline: auto; }
+
+/* ==========================================================
+   Navigation
+   ========================================================== */
+.skip-link {
+    position: absolute; left: 1rem; top: -4rem; z-index: 100;
+    padding: .6rem 1rem; border-radius: var(--radius-sm);
+    background: var(--accent); color: var(--accent-ink); font-weight: 600;
+}
+.skip-link:focus { top: 1rem; }
+
+.site-header {
+    position: sticky; top: 0; z-index: 50;
+    background: color-mix(in srgb, var(--bg) 72%, transparent);
+    backdrop-filter: saturate(160%) blur(14px);
+    -webkit-backdrop-filter: saturate(160%) blur(14px);
+    border-bottom: 1px solid var(--border);
+}
+.nav { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+
+.brand { display: inline-flex; align-items: center; gap: .7rem; color: var(--text); font-weight: 700; letter-spacing: -0.01em; }
+.brand-mark {
+    display: grid; place-items: center; width: 36px; height: 36px;
+    border-radius: 10px; background: var(--gradient); color: var(--accent-ink); font-weight: 800;
+}
+
+.nav-links { display: flex; align-items: center; gap: .4rem; margin: 0; padding: 0; list-style: none; }
+.nav-links a {
+    display: block; padding: .5rem .95rem; border-radius: 999px;
+    color: var(--muted); font-size: .95rem; font-weight: 500;
+    transition: color .2s, background .2s;
+}
+.nav-links a:hover { color: var(--text); background: var(--surface); }
+.nav-links .nav-cta { color: var(--accent-ink); background: var(--gradient); font-weight: 600; }
+.nav-links .nav-cta:hover { color: var(--accent-ink); background: var(--gradient); filter: brightness(1.08); }
+
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
