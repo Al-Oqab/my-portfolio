@@ -15,3 +15,23 @@
     links.addEventListener("click", (e) => { if (e.target.closest("a")) setMenu(false); });
     document.addEventListener("keydown", (e) => { if (e.key === "Escape") setMenu(false); });
 })();
+
+/* Scroll reveal */
+(() => {
+    const items = document.querySelectorAll(".reveal");
+    if (!("IntersectionObserver" in window)) { items.forEach((el) => el.classList.add("in")); return; }
+
+    document.documentElement.classList.add("js");
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("in");
+            io.unobserve(entry.target);
+        });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+
+    items.forEach((el, i) => {
+        el.style.transitionDelay = `${(i % 3) * 80}ms`;
+        io.observe(el);
+    });
+})();
