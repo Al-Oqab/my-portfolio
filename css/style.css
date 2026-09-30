@@ -180,3 +180,27 @@ h1, h2, h3 { line-height: 1.15; letter-spacing: -0.02em; margin: 0 0 .5em; }
 
 .skills-figure { margin: 0; padding: 1rem; border-radius: 28px; background: #f4f7f7; box-shadow: var(--shadow); }
 .skills-figure img { border-radius: 20px; }
+
+/* ==========================================================
+   Projects
+   ========================================================== */
+.project-feature {
+    margin: 2.5rem 0 1.5rem; border-radius: var(--radius); overflow: hidden;
+    background: var(--surface); border: 1px solid var(--border); box-shadow: var(--shadow);
+}
+.project-feature img { width: 100%; }
+.project-feature figcaption { padding: .9rem 1.3rem; font-size: .9rem; color: var(--muted); border-top: 1px solid var(--border); }
+
+.project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.project-card {
+    display: flex; flex-direction: column; padding: 1.8rem; border-radius: var(--radius);
+    background: var(--surface); border: 1px solid var(--border);
+    transition: transform .25s, border-color .25s, box-shadow .25s;
+}
+.project-card:hover { transform: translateY(-6px); border-color: rgba(45, 212, 191, .45); box-shadow: var(--shadow); }
+.project-icon {
+    display: grid; place-items: center; width: 52px; height: 52px; margin-bottom: 1.2rem;
+    font-size: 1.5rem; border-radius: 14px; background: var(--surface-2);
+}
+.project-card h3 { font-size: 1.2rem; }
+.project-card p { color: var(--muted); font-size: .98rem; margin: 0 0 1.4rem; flex: 1; }
