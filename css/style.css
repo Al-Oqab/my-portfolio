@@ -304,3 +304,6 @@ h1, h2, h3 { line-height: 1.15; letter-spacing: -0.02em; margin: 0 0 .5em; }
 .icon-sun { display: none; }
 :root[data-theme="light"] .icon-sun { display: block; }
 :root[data-theme="light"] .icon-moon { display: none; }
+
+/* Active nav link */
+.nav-links a[aria-current="true"]:not(.nav-cta) { color: var(--text); background: var(--surface); }

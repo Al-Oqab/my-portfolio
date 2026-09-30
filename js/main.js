@@ -54,3 +54,25 @@
         try { localStorage.setItem("theme", next); } catch (e) { /* storage unavailable */ }
     });
 })();
+
+/* Highlight the nav link of the section in view */
+(() => {
+    const links = document.querySelectorAll('.nav-links a[href^="#"]');
+    const map = new Map();
+    links.forEach((a) => {
+        const sec = document.querySelector(a.getAttribute("href"));
+        if (sec) map.set(sec, a);
+    });
+    if (!("IntersectionObserver" in window)) return;
+
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            const link = map.get(entry.target);
+            if (link && entry.isIntersecting) {
+                links.forEach((l) => l.removeAttribute("aria-current"));
+                link.setAttribute("aria-current", "true");
+            }
+        });
+    }, { rootMargin: "-45% 0px -50% 0px" });
+    map.forEach((_, sec) => io.observe(sec));
+})();
