@@ -331,3 +331,15 @@ h1, h2, h3 { line-height: 1.15; letter-spacing: -0.02em; margin: 0 0 .5em; }
 .hero-text > :nth-child(4) { animation-delay: .24s; }
 .hero-text > :nth-child(5) { animation-delay: .32s; }
 @keyframes rise { from { opacity: 0; transform: translateY(18px); } }
+
+/* ==========================================================
+   Print
+   ========================================================== */
+@media print {
+    .site-header, .progress, .hero-glow, .floating-chip, .theme-toggle, .nav-toggle, .skip-link { display: none !important; }
+    body { background: #fff; color: #000; }
+    .section { padding: 1.5rem 0; }
+    .reveal, .js .reveal { opacity: 1 !important; transform: none !important; }
+    .project-card, .skill-card, .contact-card, .facts li { background: #fff; border-color: #ccc; box-shadow: none; }
+    a { color: #000; }
+}
