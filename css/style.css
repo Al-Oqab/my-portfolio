@@ -155,3 +155,28 @@ h1, h2, h3 { line-height: 1.15; letter-spacing: -0.02em; margin: 0 0 .5em; }
     background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm);
 }
 .facts span { font-family: var(--mono); font-size: .8rem; color: var(--accent); padding-top: .15rem; }
+
+/* ==========================================================
+   Skills
+   ========================================================== */
+.section-alt { background: var(--bg-soft); border-block: 1px solid var(--border); }
+.section-sub { color: var(--muted); max-width: 48ch; margin: 0 0 2rem; }
+
+.skills-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+.skill-groups { display: grid; gap: 1rem; }
+.skill-card {
+    padding: 1.3rem 1.4rem; border-radius: var(--radius);
+    background: var(--surface); border: 1px solid var(--border);
+    transition: transform .25s, border-color .25s;
+}
+.skill-card:hover { transform: translateY(-3px); border-color: rgba(45, 212, 191, .45); }
+.skill-card h3 { font-size: 1rem; margin-bottom: .9rem; color: var(--muted); font-weight: 600; }
+
+.chips { display: flex; flex-wrap: wrap; gap: .55rem; list-style: none; margin: 0; padding: 0; }
+.chips li {
+    padding: .4rem .9rem; border-radius: 999px; font-size: .92rem; font-weight: 500;
+    background: rgba(45, 212, 191, .1); color: var(--accent); border: 1px solid rgba(45, 212, 191, .25);
+}
+
+.skills-figure { margin: 0; padding: 1rem; border-radius: 28px; background: #f4f7f7; box-shadow: var(--shadow); }
+.skills-figure img { border-radius: 20px; }
