@@ -204,3 +204,22 @@ h1, h2, h3 { line-height: 1.15; letter-spacing: -0.02em; margin: 0 0 .5em; }
 }
 .project-card h3 { font-size: 1.2rem; }
 .project-card p { color: var(--muted); font-size: .98rem; margin: 0 0 1.4rem; flex: 1; }
+
+/* ==========================================================
+   Contact & Footer
+   ========================================================== */
+.contact-card {
+    position: relative; overflow: hidden; text-align: center;
+    padding: clamp(2.5rem, 7vw, 5rem) 1.5rem; border-radius: 32px;
+    background:
+        radial-gradient(600px 240px at 50% 0%, rgba(45, 212, 191, .18), transparent 70%),
+        var(--surface);
+    border: 1px solid var(--border);
+}
+.contact-card p:not(.kicker) { max-width: 46ch; margin: 0 auto 2rem; color: var(--muted); }
+
+.site-footer { border-top: 1px solid var(--border); padding: 1.8rem 0; color: var(--muted); font-size: .92rem; }
+.footer-inner { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.footer-inner p { margin: 0; }
+.footer-inner a { color: var(--muted); }
+.footer-inner a:hover { color: var(--accent); }
