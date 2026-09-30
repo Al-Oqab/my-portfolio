@@ -323,3 +323,11 @@ h1, h2, h3 { line-height: 1.15; letter-spacing: -0.02em; margin: 0 0 .5em; }
     background: var(--gradient); opacity: 0; transition: opacity .25s;
 }
 .project-card:hover::before, .skill-card:hover::before { opacity: 1; }
+
+/* Gentle entrance for hero text */
+.hero-text > * { animation: rise .7s ease both; }
+.hero-text > :nth-child(2) { animation-delay: .08s; }
+.hero-text > :nth-child(3) { animation-delay: .16s; }
+.hero-text > :nth-child(4) { animation-delay: .24s; }
+.hero-text > :nth-child(5) { animation-delay: .32s; }
+@keyframes rise { from { opacity: 0; transform: translateY(18px); } }
