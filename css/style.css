@@ -307,3 +307,5 @@ h1, h2, h3 { line-height: 1.15; letter-spacing: -0.02em; margin: 0 0 .5em; }
 
 /* Active nav link */
 .nav-links a[aria-current="true"]:not(.nav-cta) { color: var(--text); background: var(--surface); }
+
+.contact-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: .9rem; }
