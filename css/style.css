@@ -309,3 +309,9 @@ h1, h2, h3 { line-height: 1.15; letter-spacing: -0.02em; margin: 0 0 .5em; }
 .nav-links a[aria-current="true"]:not(.nav-cta) { color: var(--text); background: var(--surface); }
 
 .contact-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: .9rem; }
+
+/* Scroll progress bar */
+.progress {
+    position: fixed; top: 0; left: 0; z-index: 60; height: 3px; width: 100%;
+    background: var(--gradient); transform-origin: 0 50%; transform: scaleX(0);
+}

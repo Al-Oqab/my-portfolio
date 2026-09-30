@@ -82,3 +82,16 @@
     const year = document.getElementById("year");
     if (year) year.textContent = new Date().getFullYear();
 })();
+
+/* Scroll progress bar */
+(() => {
+    const bar = document.querySelector(".progress");
+    if (!bar) return;
+    const update = () => {
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        bar.style.transform = `scaleX(${max > 0 ? window.scrollY / max : 0})`;
+    };
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    update();
+})();
