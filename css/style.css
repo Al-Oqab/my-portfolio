@@ -275,3 +275,32 @@ h1, h2, h3 { line-height: 1.15; letter-spacing: -0.02em; margin: 0 0 .5em; }
     *, *::before, *::after { animation: none !important; transition: none !important; }
     .js .reveal { opacity: 1; transform: none; }
 }
+
+/* ==========================================================
+   Light theme & theme toggle
+   ========================================================== */
+:root[data-theme="light"] {
+    --bg: #f6f8fb;
+    --bg-soft: #edf1f7;
+    --surface: #ffffff;
+    --surface-2: #eef2f8;
+    --border: rgba(15, 23, 42, 0.1);
+    --text: #0f172a;
+    --muted: #475569;
+    --accent: #0d9488;
+    --accent-2: #0284c7;
+    --accent-ink: #ffffff;
+    --shadow: 0 20px 40px -24px rgba(15, 23, 42, 0.35);
+}
+:root[data-theme="light"] .hero-glow { background: radial-gradient(circle, rgba(13, 148, 136, .18), transparent 65%); }
+:root[data-theme="light"] .chips li { background: rgba(13, 148, 136, .08); border-color: rgba(13, 148, 136, .25); }
+
+.theme-toggle {
+    display: grid; place-items: center; width: 40px; height: 40px; margin-left: auto; margin-right: .6rem;
+    color: var(--text); cursor: pointer; background: var(--surface);
+    border: 1px solid var(--border); border-radius: 50%; transition: background .2s, transform .2s;
+}
+.theme-toggle:hover { background: var(--surface-2); transform: rotate(12deg); }
+.icon-sun { display: none; }
+:root[data-theme="light"] .icon-sun { display: block; }
+:root[data-theme="light"] .icon-moon { display: none; }

@@ -35,3 +35,22 @@
         io.observe(el);
     });
 })();
+
+/* Theme toggle (dark default, persisted) */
+(() => {
+    const root = document.documentElement;
+    const btn = document.querySelector(".theme-toggle");
+    const meta = document.querySelector('meta[name="theme-color"]');
+
+    const apply = (theme) => {
+        root.dataset.theme = theme;
+        if (meta) meta.content = theme === "light" ? "#f6f8fb" : "#0b0f14";
+    };
+    if (root.dataset.theme) apply(root.dataset.theme);
+
+    btn.addEventListener("click", () => {
+        const next = root.dataset.theme === "light" ? "dark" : "light";
+        apply(next);
+        try { localStorage.setItem("theme", next); } catch (e) { /* storage unavailable */ }
+    });
+})();
