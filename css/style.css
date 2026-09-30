@@ -343,3 +343,7 @@ h1, h2, h3 { line-height: 1.15; letter-spacing: -0.02em; margin: 0 0 .5em; }
     .project-card, .skill-card, .contact-card, .facts li { background: #fff; border-color: #ccc; box-shadow: none; }
     a { color: #000; }
 }
+
+/* Keep long words from overflowing on narrow screens */
+h1, h2, h3, p, li { overflow-wrap: break-word; }
+.section-head h2 { text-wrap: balance; }
