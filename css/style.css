@@ -392,3 +392,20 @@ h1, h2, h3, p, li { overflow-wrap: break-word; }
 .edu-card p:not(.edu-school) { margin: 0; color: var(--muted); font-size: .98rem; }
 
 @media (max-width: 720px) { .edu-grid { grid-template-columns: 1fr; } }
+
+/* ==========================================================
+   Languages
+   ========================================================== */
+.languages { margin-top: clamp(2.5rem, 6vw, 4rem); padding-top: 2.5rem; border-top: 1px solid var(--border); }
+.languages h3 { font-size: 1.3rem; margin-bottom: 1.4rem; }
+.lang-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.lang-list li {
+    display: grid; gap: .25rem; padding: 1.3rem 1.4rem; border-radius: var(--radius);
+    background: var(--surface); border: 1px solid var(--border);
+}
+.lang-name { font-size: 1.1rem; font-weight: 700; }
+.lang-level { font-size: .9rem; color: var(--muted); }
+.meter { height: 6px; margin-top: .8rem; border-radius: 99px; background: var(--surface-2); overflow: hidden; }
+.meter::after { content: ""; display: block; height: 100%; width: var(--level); border-radius: inherit; background: var(--gradient); }
+
+@media (max-width: 720px) { .lang-list { grid-template-columns: 1fr; } }
