@@ -95,3 +95,24 @@
     window.addEventListener("resize", update);
     update();
 })();
+
+/* Count-up for hero stats */
+(() => {
+    const nums = document.querySelectorAll("[data-count]");
+    if (!nums.length || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    nums.forEach((el) => {
+        const target = Number(el.dataset.count);
+        const suffix = el.dataset.suffix || "";
+        const start = performance.now();
+        const duration = 1100;
+        const tick = (now) => {
+            const t = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - t, 3);
+            el.textContent = Math.round(target * eased) + suffix;
+            if (t < 1) requestAnimationFrame(tick);
+        };
+        el.textContent = "0" + suffix;
+        requestAnimationFrame(tick);
+    });
+})();
