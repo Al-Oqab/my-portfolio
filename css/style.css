@@ -375,3 +375,20 @@ h1, h2, h3, p, li { overflow-wrap: break-word; }
 @media (max-width: 720px) {
     .timeline-item { grid-template-columns: 1fr; gap: .5rem; }
 }
+
+/* ==========================================================
+   Education
+   ========================================================== */
+.edu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem; margin-top: 2.5rem; }
+.edu-card {
+    position: relative; padding: 1.8rem; border-radius: var(--radius);
+    background: var(--surface); border: 1px solid var(--border);
+    transition: transform .25s, border-color .25s;
+}
+.edu-card:hover { transform: translateY(-4px); border-color: rgba(45, 212, 191, .45); }
+.edu-date { display: inline-block; margin-bottom: 1rem; padding: .25rem .75rem; border-radius: 999px; font-family: var(--mono); font-size: .8rem; color: var(--accent); background: rgba(45, 212, 191, .1); }
+.edu-card h3 { font-size: 1.2rem; margin-bottom: .3rem; }
+.edu-school { margin: 0 0 .9rem; font-weight: 600; }
+.edu-card p:not(.edu-school) { margin: 0; color: var(--muted); font-size: .98rem; }
+
+@media (max-width: 720px) { .edu-grid { grid-template-columns: 1fr; } }
