@@ -409,3 +409,22 @@ h1, h2, h3, p, li { overflow-wrap: break-word; }
 .meter::after { content: ""; display: block; height: 100%; width: var(--level); border-radius: inherit; background: var(--gradient); }
 
 @media (max-width: 720px) { .lang-list { grid-template-columns: 1fr; } }
+
+/* ==========================================================
+   Polish
+   ========================================================== */
+.hero::before {
+    content: ""; position: absolute; inset: 0; z-index: -1; opacity: .5;
+    background-image: radial-gradient(rgba(255, 255, 255, .06) 1px, transparent 1px);
+    background-size: 28px 28px;
+    mask-image: radial-gradient(ellipse at 30% 40%, #000 20%, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse at 30% 40%, #000 20%, transparent 75%);
+}
+:root[data-theme="light"] .hero::before { background-image: radial-gradient(rgba(15, 23, 42, .09) 1px, transparent 1px); }
+
+.kicker::before { content: ""; display: inline-block; width: 28px; height: 2px; margin-right: .7rem; vertical-align: middle; background: var(--gradient); }
+
+.nav-links a { font-size: .9rem; padding: .5rem .8rem; }
+
+.hero-stats li { padding-right: 2rem; border-right: 1px solid var(--border); }
+.hero-stats li:last-child { border-right: 0; }
