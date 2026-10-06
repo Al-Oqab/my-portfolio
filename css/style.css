@@ -347,3 +347,31 @@ h1, h2, h3 { line-height: 1.15; letter-spacing: -0.02em; margin: 0 0 .5em; }
 /* Keep long words from overflowing on narrow screens */
 h1, h2, h3, p, li { overflow-wrap: break-word; }
 .section-head h2 { text-wrap: balance; }
+
+/* ==========================================================
+   Experience timeline
+   ========================================================== */
+.timeline { position: relative; list-style: none; margin: 2.5rem 0 0; padding: 0 0 0 1.8rem; display: grid; gap: 1.4rem; }
+.timeline::before {
+    content: ""; position: absolute; left: 6px; top: 8px; bottom: 8px; width: 2px;
+    background: linear-gradient(var(--accent), transparent);
+}
+.timeline-item { position: relative; display: grid; grid-template-columns: 150px 1fr; gap: 1.5rem; align-items: start; }
+.timeline-item::before {
+    content: ""; position: absolute; left: calc(-1.8rem + 1px); top: .55rem; width: 12px; height: 12px;
+    border-radius: 50%; background: var(--bg-soft); border: 2px solid var(--accent);
+    box-shadow: 0 0 0 4px rgba(45, 212, 191, .15);
+}
+.timeline-date { padding-top: .2rem; font-family: var(--mono); font-size: .85rem; color: var(--accent); }
+.timeline-card {
+    padding: 1.6rem 1.7rem; border-radius: var(--radius); background: var(--surface);
+    border: 1px solid var(--border); transition: transform .25s, border-color .25s;
+}
+.timeline-card:hover { transform: translateX(4px); border-color: rgba(45, 212, 191, .45); }
+.timeline-card h3 { font-size: 1.15rem; margin-bottom: .2rem; }
+.timeline-org { margin: 0 0 .9rem; font-size: .92rem; font-weight: 600; color: var(--muted); }
+.timeline-card p:not(.timeline-org) { margin: 0 0 1.1rem; color: var(--muted); font-size: .98rem; }
+
+@media (max-width: 720px) {
+    .timeline-item { grid-template-columns: 1fr; gap: .5rem; }
+}
