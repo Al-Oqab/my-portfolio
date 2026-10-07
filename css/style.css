@@ -548,3 +548,8 @@ body::after {
 .btn-primary:hover::after { transform: translateX(120%); }
 .btn-ghost { background: var(--glass-bg); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-color: var(--border-strong); }
 .btn-ghost:hover { border-color: rgba(34, 224, 200, .5); box-shadow: 0 0 24px -6px var(--glow); }
+
+/* Timeline: glowing nodes and gradient spine */
+.timeline::before { width: 2px; background: linear-gradient(var(--accent), var(--accent-2) 60%, transparent); box-shadow: 0 0 12px var(--glow); }
+.timeline-item::before { background: var(--bg); border-color: var(--accent); box-shadow: 0 0 0 4px rgba(34, 224, 200, .15), 0 0 16px var(--accent); }
+.timeline-date { text-shadow: 0 0 14px var(--glow); }
