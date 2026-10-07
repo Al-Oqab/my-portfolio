@@ -142,3 +142,15 @@
     });
     frame.addEventListener("pointerleave", () => { frame.style.transform = ""; });
 })();
+
+/* Reveal images once loaded (images are no longer lazy-loaded) */
+(() => {
+    const ready = (img) => img.setAttribute("data-ready", "");
+    document.querySelectorAll("img").forEach((img) => {
+        if (img.complete && img.naturalWidth) ready(img);
+        else {
+            img.addEventListener("load", () => ready(img), { once: true });
+            img.addEventListener("error", () => ready(img), { once: true });
+        }
+    });
+})();

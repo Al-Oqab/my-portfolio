@@ -649,3 +649,9 @@ body::after {
     .site-header { top: 8px; }
     .marquee-track li::before, .marquee-track { gap: 2rem; }
 }
+
+/* Images: reserve space and fade in once decoded */
+.project-feature img { aspect-ratio: 1920 / 1008; background: var(--surface); }
+img { opacity: 0; transition: opacity .6s ease; }
+img.loaded, img[data-ready] { opacity: 1; }
+.no-js img { opacity: 1; }
