@@ -4,7 +4,7 @@ window.GH_SNAPSHOT = {
  "user": "Al-Oqab",
  "repos": 19,
  "followers": 3,
- "total": 62,
+ "total": 65,
  "contributions": [
   {
    "date": "2026-04-05",
@@ -933,11 +933,23 @@ window.GH_SNAPSHOT = {
   },
   {
    "date": "2026-10-07",
-   "count": 25,
+   "count": 28,
    "level": 4
   }
  ],
  "commits": [
+  {
+   "date": "2026-10-07T18:35:08+00:00",
+   "message": "Use the local portrait as widget avatar so it never renders empty"
+  },
+  {
+   "date": "2026-10-07T18:34:31+00:00",
+   "message": "Add GitHub widget script with live API fetch and snapshot fallback"
+  },
+  {
+   "date": "2026-10-07T18:34:17+00:00",
+   "message": "Add offline GitHub activity snapshot generated from this repository's history"
+  },
   {
    "date": "2026-10-07T18:34:10+00:00",
    "message": "Style GitHub widget with dark glassmorphism and glowing heatmap"
@@ -949,18 +961,6 @@ window.GH_SNAPSHOT = {
   {
    "date": "2026-10-07T18:33:36+00:00",
    "message": "Hide unloaded images only when JavaScript is active"
-  },
-  {
-   "date": "2026-10-07T18:33:26+00:00",
-   "message": "Fix blank images: drop lazy loading, reserve space and fade in on load"
-  },
-  {
-   "date": "2026-10-07T18:30:06+00:00",
-   "message": "Document the glassmorphism design system in README"
-  },
-  {
-   "date": "2026-10-07T18:29:42+00:00",
-   "message": "Add backdrop-filter fallback, reduced-motion and mobile tuning for premium layer"
   }
  ]
 };
