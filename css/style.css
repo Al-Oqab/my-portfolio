@@ -652,6 +652,5 @@ body::after {
 
 /* Images: reserve space and fade in once decoded */
 .project-feature img { aspect-ratio: 1920 / 1008; background: var(--surface); }
-img { opacity: 0; transition: opacity .6s ease; }
-img.loaded, img[data-ready] { opacity: 1; }
-.no-js img { opacity: 1; }
+.js img { transition: opacity .6s ease; }
+.js img:not([data-ready]) { opacity: 0; }

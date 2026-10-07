@@ -145,6 +145,7 @@
 
 /* Reveal images once loaded (images are no longer lazy-loaded) */
 (() => {
+    document.documentElement.classList.add("js");
     const ready = (img) => img.setAttribute("data-ready", "");
     document.querySelectorAll("img").forEach((img) => {
         if (img.complete && img.naturalWidth) ready(img);
