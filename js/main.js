@@ -44,7 +44,7 @@
 
     const apply = (theme) => {
         root.dataset.theme = theme;
-        if (meta) meta.content = theme === "light" ? "#f6f8fb" : "#0b0f14";
+        if (meta) meta.content = theme === "light" ? "#f6f8fb" : "#05090d";
     };
     if (root.dataset.theme) apply(root.dataset.theme);
 
