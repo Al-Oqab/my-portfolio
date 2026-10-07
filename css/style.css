@@ -598,3 +598,10 @@ body::after {
     content: ""; position: absolute; top: -1px; left: 10%; right: 10%; height: 1px;
     background: linear-gradient(90deg, transparent, var(--accent), var(--accent-2), transparent); opacity: .7;
 }
+
+/* Section headings with a soft cyan gradient */
+.section h2 {
+    background: linear-gradient(180deg, #fff 30%, rgba(180, 235, 235, .75));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.kicker { text-shadow: 0 0 18px var(--glow); }
