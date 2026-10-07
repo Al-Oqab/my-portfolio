@@ -496,3 +496,13 @@ body::after {
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, .07), 0 18px 40px -24px rgba(0, 0, 0, .8);
 }
 .project-icon { background: rgba(34, 224, 200, .1); box-shadow: inset 0 0 0 1px rgba(34, 224, 200, .25), 0 0 20px -4px var(--glow); }
+
+/* Cursor spotlight on glass cards (position set from JS) */
+.skill-card, .project-card, .edu-card, .timeline-card, .lang-list li { --mx: 50%; --my: 50%; }
+.skill-card::after, .project-card::after, .edu-card::after, .timeline-card::after, .lang-list li::after {
+    content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; opacity: 0;
+    background: radial-gradient(320px circle at var(--mx) var(--my), rgba(34, 224, 200, .14), transparent 65%);
+    transition: opacity .3s;
+}
+.skill-card:hover::after, .project-card:hover::after, .edu-card:hover::after, .timeline-card:hover::after, .lang-list li:hover::after { opacity: 1; }
+.timeline-card, .lang-list li { position: relative; overflow: hidden; }

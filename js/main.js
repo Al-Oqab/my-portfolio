@@ -116,3 +116,15 @@
         requestAnimationFrame(tick);
     });
 })();
+
+/* Cursor spotlight on cards */
+(() => {
+    const cards = document.querySelectorAll(".skill-card, .project-card, .edu-card, .timeline-card, .lang-list li");
+    cards.forEach((card) => {
+        card.addEventListener("pointermove", (e) => {
+            const r = card.getBoundingClientRect();
+            card.style.setProperty("--mx", `${e.clientX - r.left}px`);
+            card.style.setProperty("--my", `${e.clientY - r.top}px`);
+        });
+    });
+})();
