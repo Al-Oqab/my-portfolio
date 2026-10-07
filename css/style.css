@@ -524,3 +524,14 @@ body::after {
     content: ""; position: absolute; inset: -12% -18%; z-index: -1; border-radius: 50%;
     background: radial-gradient(circle, rgba(34, 224, 200, .28), transparent 62%); filter: blur(30px);
 }
+
+/* Hero: glass badge and floating tech chips */
+.eyebrow, .floating-chip {
+    background: var(--glass-bg);
+    backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+    border: 1px solid var(--border-strong);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1), 0 10px 30px -10px rgba(0, 0, 0, .7);
+}
+.floating-chip { color: var(--accent); }
+.dot { animation: pulse 2.4s ease-in-out infinite; }
+@keyframes pulse { 50% { box-shadow: 0 0 0 8px rgba(34, 224, 200, 0); } }
