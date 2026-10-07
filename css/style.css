@@ -634,3 +634,18 @@ body::after {
 :root[data-theme="light"] .section h2 { background: linear-gradient(180deg, #0b1f2b 40%, #1d4f5f); -webkit-background-clip: text; background-clip: text; }
 :root[data-theme="light"] .nav-links { background: rgba(238, 245, 248, .95); }
 :root[data-theme="light"] .hero-stats strong { color: var(--text); }
+
+/* Fallbacks */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    .site-header, .skill-card, .project-card, .edu-card, .timeline-card, .facts li, .lang-list li,
+    .project-feature, .contact-card, .eyebrow, .floating-chip { background: var(--bg-soft); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .marquee-track { animation: none; }
+    .photo-frame { transition: none; transform: none !important; }
+}
+@media (max-width: 720px) {
+    :root { --glass-blur: 12px; }
+    .site-header { top: 8px; }
+    .marquee-track li::before, .marquee-track { gap: 2rem; }
+}
