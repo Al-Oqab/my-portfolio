@@ -2,23 +2,33 @@
    Design tokens
    ========================================================== */
 :root {
-    --bg: #0b0f14;
-    --bg-soft: #111823;
-    --surface: #151d2a;
-    --surface-2: #1b2535;
-    --border: rgba(255, 255, 255, 0.08);
-    --text: #e8eef6;
-    --muted: #94a3b8;
-    --accent: #2dd4bf;
-    --accent-2: #38bdf8;
-    --accent-ink: #04221e;
-    --gradient: linear-gradient(135deg, var(--accent), var(--accent-2));
-    --shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.6);
+    /* surfaces */
+    --bg: #05090d;
+    --bg-soft: #08111a;
+    --surface: rgba(255, 255, 255, 0.04);
+    --surface-2: rgba(255, 255, 255, 0.07);
+    --border: rgba(255, 255, 255, 0.09);
+    --border-strong: rgba(255, 255, 255, 0.16);
+    --text: #eaf4f8;
+    --muted: #8fa6b4;
 
-    --radius: 18px;
-    --radius-sm: 10px;
+    /* cyan / teal accents */
+    --accent: #22e0c8;
+    --accent-2: #22b8f0;
+    --accent-ink: #031a18;
+    --glow: rgba(34, 224, 200, 0.35);
+    --gradient: linear-gradient(135deg, var(--accent), var(--accent-2));
+
+    /* glass */
+    --glass-bg: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+    --glass-blur: 18px;
+    --shadow: 0 24px 60px -24px rgba(0, 0, 0, 0.8);
+
+    --radius: 20px;
+    --radius-sm: 12px;
     --container: 1120px;
     --font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --display: "Space Grotesk", "Inter", system-ui, sans-serif;
     --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
