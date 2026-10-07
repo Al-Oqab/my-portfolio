@@ -3,6 +3,8 @@
 Persönliche Portfolio-Webseite (HTML, CSS, JavaScript – ohne Build-Schritt).
 
 ## Features
+- Premium dark UI: Glassmorphism (Frosted Glass), Aurora-Hintergrund in Cyan/Teal, Glow-Akzente, Film-Grain
+- Interaktionen: Spotlight auf Karten, 3D-Tilt am Porträt, Tech-Marquee
 - Modernes Dark-Design mit Light-Mode-Umschalter (wird gespeichert)
 - Sticky Glas-Navigation, mobiles Menü, aktiver Link beim Scrollen
 - Hero, Über mich, Erfahrung (Timeline), Ausbildung, Kenntnisse, Sprachen, Projekte, Kontakt
