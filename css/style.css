@@ -576,3 +576,15 @@ body::after {
 .marquee-track li::before { content: "◆"; margin-right: 3rem; color: var(--accent); font-size: .6rem; vertical-align: middle; }
 .marquee:hover .marquee-track { animation-play-state: paused; }
 @keyframes marquee { to { transform: translateX(-100%); } }
+
+/* Contact: aurora glass panel */
+.contact-card {
+    background:
+        radial-gradient(520px 260px at 20% 0%, rgba(34, 224, 200, .22), transparent 70%),
+        radial-gradient(520px 260px at 85% 100%, rgba(34, 184, 240, .2), transparent 70%),
+        var(--glass-bg);
+    border: 1px solid var(--border-strong);
+    backdrop-filter: blur(22px) saturate(160%); -webkit-backdrop-filter: blur(22px) saturate(160%);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .12), 0 0 90px -30px var(--glow), var(--shadow);
+}
+.contact-card h2 { font-size: clamp(2rem, 4.5vw, 3.2rem); }
