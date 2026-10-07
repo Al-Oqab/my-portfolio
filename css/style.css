@@ -438,3 +438,13 @@ h1, h2, h3, p, li { overflow-wrap: break-word; }
 
 .hero-stats li { padding-right: 2rem; border-right: 1px solid var(--border); }
 .hero-stats li:last-child { border-right: 0; }
+
+/* ==========================================================
+   Premium layer
+   ========================================================== */
+
+/* Typography */
+h1, h2, h3, .brand, .hero-stats strong { font-family: var(--display); }
+h1 { letter-spacing: -0.035em; }
+h2 { letter-spacing: -0.03em; }
+body { font-feature-settings: "cv11", "ss01"; }
