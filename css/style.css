@@ -708,3 +708,4 @@ body::after {
 .skills-grid { align-items: start; }
 .skills-grid .gh-widget { position: sticky; top: 100px; }
 @media (max-width: 960px) { .skills-grid .gh-widget { position: relative; top: 0; max-width: 560px; } }
+.gh-avatar { object-position: 50% 22%; }
