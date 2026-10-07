@@ -128,3 +128,17 @@
         });
     });
 })();
+
+/* Subtle 3D tilt on the hero portrait */
+(() => {
+    const frame = document.querySelector(".photo-frame");
+    if (!frame || window.matchMedia("(hover: none), (prefers-reduced-motion: reduce)").matches) return;
+
+    frame.addEventListener("pointermove", (e) => {
+        const r = frame.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - 0.5;
+        const y = (e.clientY - r.top) / r.height - 0.5;
+        frame.style.transform = `perspective(900px) rotateY(${x * 10}deg) rotateX(${-y * 10}deg)`;
+    });
+    frame.addEventListener("pointerleave", () => { frame.style.transform = ""; });
+})();
