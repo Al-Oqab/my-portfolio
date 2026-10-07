@@ -553,3 +553,12 @@ body::after {
 .timeline::before { width: 2px; background: linear-gradient(var(--accent), var(--accent-2) 60%, transparent); box-shadow: 0 0 12px var(--glow); }
 .timeline-item::before { background: var(--bg); border-color: var(--accent); box-shadow: 0 0 0 4px rgba(34, 224, 200, .15), 0 0 16px var(--accent); }
 .timeline-date { text-shadow: 0 0 14px var(--glow); }
+
+/* Glowing tech chips and meters */
+.chips li {
+    background: rgba(34, 224, 200, .08); border-color: rgba(34, 224, 200, .28);
+    backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    transition: box-shadow .25s, background .25s, transform .25s;
+}
+.chips li:hover { background: rgba(34, 224, 200, .16); box-shadow: 0 0 18px -2px var(--glow); transform: translateY(-1px); }
+.meter::after { box-shadow: 0 0 14px var(--accent); }
