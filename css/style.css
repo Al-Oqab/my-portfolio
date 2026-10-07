@@ -483,3 +483,6 @@ body::after {
     .site-header { border-radius: 24px; }
     .nav-links { top: 66px; border-radius: 20px; border: 1px solid var(--border); margin-inline: .2rem; background: rgba(8, 17, 26, .85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
 }
+
+/* Let the aurora show through alternating sections */
+.section-alt { background: linear-gradient(180deg, rgba(255, 255, 255, .025), rgba(255, 255, 255, .008)); border-color: var(--border); }
