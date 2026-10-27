@@ -734,3 +734,9 @@ body::before {
         radial-gradient(900px 700px at 50% 112%, rgba(34, 224, 200, .08), transparent 60%),
         var(--bg);
 }
+
+/* Section rhythm: 88px vertical padding, 10px kicker gap, 44px titles */
+.section { padding: clamp(3.5rem, 7vw, 5.5rem) 0; }
+.section-head { margin-bottom: var(--space-48); }
+.kicker { margin-bottom: .6rem; }
+.section h2 { font-size: clamp(2rem, 3.6vw, 2.75rem); letter-spacing: -0.045em; line-height: 1.1; }
