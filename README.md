@@ -19,3 +19,6 @@ js/main.js   Navigation, Theme, Animationen
 pics/        Bilder
 ```
 Lokal ansehen: `index.html` im Browser öffnen.
+
+## Design
+Figma-Entwurf (Desktop, Tokens als Variablen): https://www.figma.com/design/ytUW6Rs69TszW7AUu7ydh3
