@@ -740,3 +740,7 @@ body::before {
 .section-head { margin-bottom: var(--space-48); }
 .kicker { margin-bottom: .6rem; }
 .section h2 { font-size: clamp(2rem, 3.6vw, 2.75rem); letter-spacing: -0.045em; line-height: 1.1; }
+
+/* Nav links: 14px x 8px hit area, compact gradient CTA */
+.nav-links a { padding: .5rem .875rem; font-size: .875rem; }
+.nav-links .nav-cta { padding: .5rem 1.1rem; box-shadow: 0 8px 24px -10px var(--glow); }
