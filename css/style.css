@@ -768,3 +768,10 @@ body::before {
 .hero-stats { gap: var(--space-32); margin-top: var(--space-48); }
 .hero-stats strong { font-size: 1.9rem; letter-spacing: -0.04em; }
 .hero-stats span { font-size: .8rem; letter-spacing: .01em; }
+
+/* GitHub widget: tighter header and stat tiles like the Figma card */
+.gh-widget { padding: var(--space-24); }
+.gh-name { font-size: 1.1rem; letter-spacing: -0.02em; }
+.gh-stats li { padding: .75rem; }
+.gh-stats strong { font-size: 1.4rem; }
+.gh-title { margin-top: var(--space-24); }
