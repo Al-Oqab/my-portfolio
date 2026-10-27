@@ -725,3 +725,12 @@ body::after {
 /* Hero typography: larger, tighter, as in the Figma frame */
 .hero h1 { font-size: clamp(2.6rem, 6vw, 4.25rem); line-height: 1.05; letter-spacing: -0.045em; margin-bottom: var(--space-24); }
 .lead { font-size: 1.2rem; line-height: 1.65; margin-bottom: var(--space-32); }
+
+/* Ambient glows: large teal orb top-left, cyan orb top-right */
+body::before {
+    background:
+        radial-gradient(760px 520px at 4% 2%, rgba(34, 224, 200, .26), transparent 62%),
+        radial-gradient(720px 520px at 82% 4%, rgba(34, 184, 240, .22), transparent 62%),
+        radial-gradient(900px 700px at 50% 112%, rgba(34, 224, 200, .08), transparent 60%),
+        var(--bg);
+}
