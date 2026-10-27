@@ -758,3 +758,8 @@ body::before {
 .project-icon { width: 48px; height: 48px; border-radius: 14px; color: var(--accent); }
 .project-card { padding: var(--space-32) 1.75rem; }
 .project-card h3 { font-size: 1.3rem; letter-spacing: -0.02em; }
+
+/* Contact: roomier panel with a larger headline */
+.contact-card { padding: clamp(3rem, 7vw, 4.5rem) 1.5rem; border-radius: 32px; }
+.contact-card h2 { font-size: clamp(2.2rem, 5vw, 3.5rem); letter-spacing: -0.05em; margin-bottom: var(--space-16); }
+.contact-actions { margin-top: var(--space-8); }
