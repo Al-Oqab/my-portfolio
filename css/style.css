@@ -775,3 +775,7 @@ body::before {
 .gh-stats li { padding: .75rem; }
 .gh-stats strong { font-size: 1.4rem; }
 .gh-title { margin-top: var(--space-24); }
+
+/* Interaction polish: visible keyboard focus on glass surfaces */
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; box-shadow: 0 0 0 6px rgba(34, 224, 200, .18); }
+.skill-card:focus-within, .project-card:focus-within { border-color: rgba(34, 224, 200, .5); }
