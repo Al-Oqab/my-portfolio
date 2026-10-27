@@ -747,3 +747,9 @@ body::before {
 
 /* Buttons: 26px x 14px, semibold labels */
 .btn { padding: .875rem 1.625rem; font-size: .95rem; font-weight: 600; letter-spacing: -0.005em; }
+
+/* Timeline: single column, date label sits on top of the card */
+.timeline-item { display: block; }
+.timeline-card .timeline-date { display: block; margin-bottom: .6rem; padding-top: 0; font-size: .78rem; letter-spacing: .04em; }
+.timeline-card { padding: var(--space-32) 1.75rem; }
+.timeline-card h3 { font-size: 1.35rem; letter-spacing: -0.02em; }
