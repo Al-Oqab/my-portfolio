@@ -753,3 +753,8 @@ body::before {
 .timeline-card .timeline-date { display: block; margin-bottom: .6rem; padding-top: 0; font-size: .78rem; letter-spacing: .04em; }
 .timeline-card { padding: var(--space-32) 1.75rem; }
 .timeline-card h3 { font-size: 1.35rem; letter-spacing: -0.02em; }
+
+/* Project icon tiles: 48px glass tile with teal glyph */
+.project-icon { width: 48px; height: 48px; border-radius: 14px; color: var(--accent); }
+.project-card { padding: var(--space-32) 1.75rem; }
+.project-card h3 { font-size: 1.3rem; letter-spacing: -0.02em; }
