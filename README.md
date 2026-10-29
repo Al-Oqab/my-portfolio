@@ -22,3 +22,8 @@ Lokal ansehen: `index.html` im Browser öffnen.
 
 ## Design
 Figma-Entwurf (Desktop, Tokens als Variablen): https://www.figma.com/design/ytUW6Rs69TszW7AUu7ydh3
+
+## GitHub-Aktivität
+Das Widget liest `data/github-activity.json`. Die Datei wird täglich von `.github/workflows/github-activity.yml`
+(über `scripts/update_activity.py`) aktualisiert und kann über **Actions → Update GitHub activity → Run workflow** manuell gestartet werden.
+Ist die Datei nicht erreichbar, nutzt das Widget die GitHub-API und zuletzt den eingebauten Snapshot.
