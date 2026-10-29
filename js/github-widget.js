@@ -89,7 +89,7 @@
         setText("followers", data.followers);
         setText("total", data.total);
         renderMap(data.contributions);
-        renderCommits(data.commits);
+        if (data.commits && data.commits.length) renderCommits(data.commits); // else keep the snapshot list
         setText("source", "Aktivität von GitHub (Stand " + new Date(data.generated).toLocaleDateString("de-DE") + ").");
     };
 
