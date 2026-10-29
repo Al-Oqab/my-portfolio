@@ -1,0 +1,30 @@
+name: Update GitHub activity
+
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build data/github-activity.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_USER: Al-Oqab
+        run: python3 scripts/update_activity.py
+      - name: Commit changes
+        run: |
+          if git diff --quiet -- data/github-activity.json; then
+            echo "No changes"; exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/github-activity.json
+          git commit -m "chore: update GitHub activity data"
+          git push
