@@ -84,8 +84,23 @@
         return true;
     };
 
+    const fromData = (data) => {
+        setText("repos", data.repos);
+        setText("followers", data.followers);
+        setText("total", data.total);
+        renderMap(data.contributions);
+        renderCommits(data.commits);
+        setText("source", "Aktivität von GitHub (Stand " + new Date(data.generated).toLocaleDateString("de-DE") + ").");
+    };
+
     (async () => {
         fromSnapshot(); // instant, never blank
+
+        // Data file refreshed daily by the GitHub Action (works for private repos too)
+        try {
+            const data = await getJSON("data/github-activity.json");
+            if (data && Array.isArray(data.contributions) && data.contributions.length) fromData(data);
+        } catch (e) { /* not served (e.g. file://) - keep snapshot */ }
 
         let live = 0;
         const [profile, contrib, events] = await Promise.allSettled([
